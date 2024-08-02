@@ -1,6 +1,8 @@
 import tkinter as tk
 from turtle import RawTurtle, ScrolledCanvas, TurtleScreen
 
+#importamos las librerías necesarias para el programa
+
 class DiagramDrawer:
     def __init__(self, root):
         self.root = root
