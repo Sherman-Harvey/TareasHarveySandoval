@@ -3,6 +3,24 @@ from turtle import RawTurtle, ScrolledCanvas, TurtleScreen
 
 # importamos las librerías necesarias para el programa
 
+"""
+    Realiza una serie de cuadrados en una ventana.
+
+    Parámetros:
+    self : representa la instancia de la clase actual,permite acceder
+        a los métodos de la clase.
+    root:ventana principal de la aplicación Tkinter
+    self.canvas.pack(fill=tk.BOTH, expand=True):determina cómo la ventana
+        se expandirá para llenar el espacio disponible dentro de su contenedor
+
+    Retorna:
+    Una cuadrícula de rectángulos establecida en una ventana nueva.
+
+    Objetivo de la función: dibujar una cuadrícula de rectángulos con
+    la capacidad de ser alterada y establecer cualquier clase de formato de
+    hoja rayada.
+    """
+
 
 class DiagramDrawer:
     def __init__(self, root):
@@ -24,6 +42,7 @@ class DiagramDrawer:
         # Dibujar los recuadros
         self.draw_rectangles()
 
+    # Define el tamaño de cada cuadrícula
     def draw_rectangles(self):
         self.turtle.penup()
         self.turtle.goto(-100, 100)
@@ -34,6 +53,7 @@ class DiagramDrawer:
             for j in range(4):
                 self.draw_rectangle(-100 + j * 50, 100 - i * 50)
 
+    # Establece la próxima posición en la que comenzará el próximo rectángulo
     def draw_rectangle(self, x, y):
         self.turtle.penup()
         self.turtle.goto(x, y)
@@ -45,6 +65,9 @@ class DiagramDrawer:
             self.turtle.right(90)
 
 
+'''Convención en Python que se utiliza para ejecutar código solo
+    cuando el script se ejecuta directamente, con el objetivo de
+    controlar la ejecución del código.'''
 if __name__ == "__main__":
     root = tk.Tk()
     app = DiagramDrawer(root)
