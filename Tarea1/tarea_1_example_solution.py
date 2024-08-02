@@ -40,7 +40,22 @@ def operation_selector(num1, num2, op):
 
     return 0, result  # Código de éxito y resultado de la operación
 
+'''Calcula el promedio de todos los valores que están en la lista.
 
+Parámetros:
+    lista_numeros:espera que sea una lista (o una secuencia) que
+    contenga números, ya sean enteros o flotantes.
+    Retorna:retorna una tupla con dos valores que depende de las
+    condiciones verificadas en el código,(-80 o -90 según el error
+    de verificacion, o el promedio de todos los valores)
+
+    Objetivo de la función:Calcula el promedio de todos los
+    valores que están en la lista, verificando que el parámetro
+    de entrada sea un número, puede ser positivo, negativo,
+    decimal, etc y que el tamaño de la lista no sea mayor a 10
+    elementos.
+
+'''
 def calculo_promedio(lista_numeros):
     # Verifica que los elementos de la lista sean números(enteros o flotantes)
     for valor in lista_numeros:
